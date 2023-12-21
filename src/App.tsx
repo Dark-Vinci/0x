@@ -1,11 +1,10 @@
 import './App.scss';
+import { HomePage } from './HomePage/HomePage';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        OX
-      </header>
+      <HomePage />
     </div>
   );
 }
