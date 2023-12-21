@@ -1,7 +1,7 @@
 @import "../../sass/constants/colors.scss";
 @import "../../sass/mixins/alignment.scss";
-@import "../../sass/mixins/border.scss";
-@import "../../sass/mixins/other.scss";
+@import "../../sass/mixins/borders.scss";
+@import "../../sass/mixins/others.scss";
 
 div.container {
     @include Debug();

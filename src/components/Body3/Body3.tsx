@@ -1,6 +1,6 @@
 import { JSX } from 'react';
 
-import style from './Body5.module.scss';
+import style from './Body3.module.scss';
 
 export function Body3(): JSX.Element {
     return (
