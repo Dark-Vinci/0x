@@ -1,11 +1,11 @@
 import { JSX } from 'react';
 
-import style from './Body2.module.scss';
+import style from './Header.module.scss';
 
-export function Body2(): JSX.Element {
+export function Header(): JSX.Element {
     return (
         <div className={ style.container }>
-            BODY
+            HEADER
         </div>
     );
 }

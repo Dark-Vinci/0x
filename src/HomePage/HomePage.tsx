@@ -1,35 +1,41 @@
 import { JSX } from 'react';
 
 import style from './HomePage.module.scss';
+import { Body1, Body3, Body4, Body5, Footer, Header, Body2, Nav } from '../components';
 
 export function HomePage(): JSX.Element {
     return (
         <div className={ style.container }>
-            <nav></nav>
+            <nav>
+                <Nav />
+            </nav>
             <body>
-                <header></header>
+                <header>
+                    <Header />
+                </header>
+
                 <section>
-                    body1
+                    <Body1 />
                 </section>
 
                 <section>
-                    body2
+                    <Body2 />
                 </section>
 
                 <section>
-                    body3
+                    <Body3 />
                 </section>
 
                 <section>
-                    body4
+                    <Body4 />
                 </section>
 
                 <section>
-                    body5
+                    <Body5 />
                 </section>
 
                 <footer>
-                    
+                    <Footer />
                 </footer>
             </body>
         </div>
