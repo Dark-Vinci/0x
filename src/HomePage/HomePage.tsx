@@ -23,23 +23,23 @@ export function HomePage(): JSX.Element {
                     <Header />
                 </header>
 
-                <section>
+                <section className={style.f}>
                     <Body1 />
                 </section>
 
-                <section>
+                <section  className={style.s}>
                     <Body2 />
                 </section>
 
-                <section>
+                <section  className={style.t}>
                     <Body3 />
                 </section>
 
-                <section>
+                <section  className={style.fo}>
                     <Body4 />
                 </section>
 
-                <section>
+                <section  className={style.ff}>
                     <Body5 />
                 </section>
 

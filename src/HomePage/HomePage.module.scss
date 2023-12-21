@@ -1,3 +1,55 @@
+@import '../sass/mixins/borders.scss';
+
 div.container {
-    border-top: 1px solid blue;
+    border: 1px solid blue;
+    width: 100vw;
+
+    & > * {
+        width: 100vw;
+    }
+
+    & > nav {
+        height: 72px;
+        @include Debug(blue);
+    }
+
+    & > body {
+        height: auto;
+        @include Debug(yellow);
+
+        & > header {
+            @include Debug(green);
+            height: calc(100vh + 300px);
+        }
+
+        & > section.f{
+            @include Debug(aqua);
+            height: 1240px;
+        }
+
+        & > section.s {
+            @include Debug(yellow);
+            height: 1214px;
+        }
+
+        & > section.t {
+            @include Debug();
+            height: 1500px;
+        }
+
+        & > section.fo {
+            @include Debug(black);
+            height: 780px;
+        }
+
+        & > section.ff {
+            @include Debug(blue);
+            height: 1120px;
+        }
+
+        & > footer {
+            @include Debug(tomato);
+            height: 1650px;
+        }
+    }
 }
