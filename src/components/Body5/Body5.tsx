@@ -5,7 +5,7 @@ import style from './Body5.module.scss';
 export function Body5(): JSX.Element {
     return (
         <div className={ style.container }>
-            BODY
+            BODY5
         </div>
     );
 }
