@@ -3,12 +3,12 @@ import { JSX } from 'react';
 import style from './HomePage.module.scss';
 import { 
     Body1,
-    Body2, 
-    Body3, 
-    Body4, 
-    Body5, 
-    Footer, 
-    Header, 
+    Body2,
+    Body3,
+    Body4,
+    Body5,
+    Footer,
+    Header,
     Nav,
 } from '../components';
 
