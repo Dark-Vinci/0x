@@ -9,7 +9,7 @@ import {
     Body5, 
     Footer, 
     Header, 
-    Nav 
+    Nav,
 } from '../components';
 
 export function HomePage(): JSX.Element {
