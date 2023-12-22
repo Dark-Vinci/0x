@@ -36,10 +36,5 @@ div.container {
             @include Debug(black);
             height: 780px;
         }
-
-        & > section.ff {
-            @include Debug(blue);
-            height: 1120px;
-        }
     }
 }
