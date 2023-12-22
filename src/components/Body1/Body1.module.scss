@@ -26,7 +26,7 @@ div.container {
         }
 
         & > div.company {
-            
+
         }
 
 
@@ -51,10 +51,6 @@ div.container {
                 visibility: hidden;
                 // height: 300px;
             }
-
-            // & > div:first-child {
-            //     margin-top: calc(0.8*100vw/6);
-            // }
 
             & > div:is(:nth-child(4), :nth-child(6), :nth-child(7), :nth-child(9)){
                 margin-top: -150px;

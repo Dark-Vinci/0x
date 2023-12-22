@@ -1,6 +1,73 @@
 import { JSX } from 'react';
 
 import style from './Body1.module.scss';
+import { Card } from './Card';
+
+type CardType =
+    | { isFade: boolean }
+    | { 
+        isFade: boolean; 
+        imageUrl: string; 
+        description: string; 
+        isComingSoon: boolean;
+        title: string;
+    }
+
+const cards: Array<CardType> = [
+    {
+        isFade: true,
+    },
+
+    {
+        isFade: false,
+        imageUrl: '',
+        description: '',
+        isComingSoon: true,
+    },
+
+    {
+        isFade: true,
+    },
+
+    {
+        isFade: false,
+        imageUrl: '',
+        description: '',
+        isComingSoon: true,
+    },
+
+    {
+        isFade: false,
+        imageUrl: '',
+        description: '',
+        isComingSoon: true,
+    },
+
+    {
+        isFade: false,
+        imageUrl: '',
+        description: '',
+        isComingSoon: true,
+    },
+
+    {
+        isFade: false,
+        imageUrl: '',
+        description: '',
+        isComingSoon: true,
+    },
+
+    {
+        isFade: true,
+    },
+
+    {
+        isFade: false,
+        imageUrl: '',
+        description: '',
+        isComingSoon: true,
+    },
+]
 
 export function Body1(): JSX.Element {
     return (
@@ -17,24 +84,30 @@ export function Body1(): JSX.Element {
                     <p>A fully integrated suite of <span>APIs</span></p>
                 </div>
                 <div className={ style.grid }>
-                    <div className={style.fade}></div>
-                    <div>
-                        <a href=".">
-                            <Card 
-                                imageUrl={''} 
-                                title={''} 
-                                description={''} 
-                                isComingSoon={false} 
-                            />
-                        </a>
-                    </div>
-                    <div className={style.fade}></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div className={style.fade}></div>
-                    <div></div>
+                    {
+                        cards.map((el, i) => {
+                            if (el.isFade) {
+                                return (
+                                    <div className={ style.fade } key={i}></div>
+                                );
+                            }
+
+                            return (
+                                <div
+                                    key={i}
+                                >
+                                    <a href=".">
+                                        <Card 
+                                            imageUrl={(el as any).imageUrl} 
+                                            title={(el as any).title} 
+                                            description={(el as any).description} 
+                                            isComingSoon={(el as any).isComingSoon} 
+                                        />
+                                    </a>
+                                </div>
+                            );
+                        })
+                    }
                 </div>
             </div>
         </div>
