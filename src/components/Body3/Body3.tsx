@@ -1,7 +1,6 @@
 import { JSX } from 'react';
 
 import style from './Body3.module.scss';
-// import { title } from 'process';
 
 const card = [
     {
