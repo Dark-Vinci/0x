@@ -10,31 +10,19 @@ div.container {
 
     & > nav {
         height: 72px;
-        // @include Debug(blue);
     }
 
     & > body {
         height: auto;
-        // @include Debug(yellow);
 
         & > header {
             @include Debug(green);
             height: calc(100vh + 300px);
         }
 
-        // & > section.f{
-        //     @include Debug(aqua);
-        //     height: 1240px;
-        // }
-
         & > section.t {
-            @include Debug();
+            // @include Debug();
             height: 1500px;
         }
-
-        // & > section.fo {
-        //     @include Debug(black);
-        //     height: 780px;
-        // }
     }
 }

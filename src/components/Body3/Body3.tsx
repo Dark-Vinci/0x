@@ -66,8 +66,12 @@ export function Body3(): JSX.Element {
                                                     <div className={style.logo }>
                                                         <img src={el.logo} alt="logo" />
                                                     </div>
-                                                    <div className={style.title }>{el.title}</div>
-                                                    <div className={style.description }>{el.description}</div>
+                                                    <div className={style.title }>
+                                                        <p>{el.title}</p>
+                                                    </div>
+                                                    <div className={style.description }>
+                                                        <p>{el.description}</p>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div className={style.right }>
@@ -88,8 +92,12 @@ export function Body3(): JSX.Element {
                                             <div className={style.logo }>
                                                 <img src={el.logo} alt="logo" />
                                             </div>
-                                            <div className={style.title }>{el.title}</div>
-                                            <div className={style.description }>{el.description}</div>
+                                            <div className={style.title }>
+                                                <p>{el.title}</p>
+                                            </div>
+                                            <div className={style.description }>
+                                                <p>{el.description}</p>
+                                            </div>
                                         </div>
                                     </div>
                                 );
