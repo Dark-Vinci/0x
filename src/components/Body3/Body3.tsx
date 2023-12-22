@@ -60,16 +60,22 @@ export function Body3(): JSX.Element {
                                     return (
                                         <div
                                             key={i}
+                                            className={ style.special }
                                         >
-                                            <div className="left">
-                                                <div className="left_container">
-                                                    <div className="logo"></div>
-                                                    <div className="title"></div>
-                                                    <div className="description"></div>
+                                            <div className={style.left }>
+                                                <div className={style.left_container }>
+                                                    <div className={style.logo }>
+                                                        <img src={el.logo} alt="logo" />
+                                                    </div>
+                                                    <div className={style.title }>{el.title}</div>
+                                                    <div className={style.description }>{el.description}</div>
                                                 </div>
                                             </div>
-                                            <div className="right">
-                                                <img src="." alt="mmagie" />
+                                            <div className={style.right }>
+                                                <img 
+                                                    src={el.special} 
+                                                    alt="mmagie" 
+                                                />
                                             </div>
                                         </div>
                                     )
@@ -79,10 +85,12 @@ export function Body3(): JSX.Element {
                                     <div
                                         key={i}
                                     >
-                                        <div className="card">
-                                            <div className="logo"></div>
-                                            <div className="title"></div>
-                                            <div className="description"></div>
+                                        <div className={style.card }>
+                                            <div className={style.logo }>
+                                                <img src={el.logo} alt="logo" />
+                                            </div>
+                                            <div className={style.title }>{el.title}</div>
+                                            <div className={style.description }>{el.description}</div>
                                         </div>
                                     </div>
                                 );

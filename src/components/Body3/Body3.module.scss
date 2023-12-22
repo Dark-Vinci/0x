@@ -26,13 +26,41 @@ div.container {
                     @include Debug(pink);
                     height: 370px;
                     border-radius: 40px;
-                    // gap: 20px;
+                }
+
+                & > div:not(.special) {
+                    @include GridCenter();
+                    & > div {
+                        div.logo {
+                            @include Square(64px);
+
+                            & > img {
+                                @include Square(100%);
+                                object-fit: fill;
+                            }
+                        }
+                    }
                 }
 
                 & > div:first-child {
-                    // grid-area: 
-                    // gap: 20px;
-                    grid-area: 1 / 1 / 2 / span 2; 
+                    grid-area: 1 / 1 / 2 / span 2;
+                    @include Flex();
+                    @include Square(100%);
+
+                    & > div {
+                        flex-basis: 50%;
+                        @include Debug(yellow);
+                        height: 100%;
+                    }
+
+                    & > div.right {
+                        width: inherit;
+                        height: 370px;
+                        & > img {
+                            @include Square(100%);
+                            object-fit: fill;
+                        }
+                    }
                 }
             }
         }
