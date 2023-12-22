@@ -15,7 +15,7 @@ div.container {
 
     & > body {
         height: auto;
-        @include Debug(yellow);
+        // @include Debug(yellow);
 
         & > header {
             @include Debug(green);
@@ -25,11 +25,6 @@ div.container {
         & > section.f{
             @include Debug(aqua);
             height: 1240px;
-        }
-
-        & > section.s {
-            @include Debug(yellow);
-            height: 1214px;
         }
 
         & > section.t {
@@ -45,11 +40,6 @@ div.container {
         & > section.ff {
             @include Debug(blue);
             height: 1120px;
-        }
-
-        & > footer {
-            @include Debug(tomato);
-            // height: 1650px;
         }
     }
 }
