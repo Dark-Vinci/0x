@@ -15,9 +15,9 @@ div.container {
 
         & > div.title {
             font-size: 70px;
-            @include Debug();
+            // @include Debug();
             color: #70707B;
-            margin-bottom: 50px;
+            margin-bottom: 60px;
 
             & > p {
                 & > span {
@@ -27,14 +27,14 @@ div.container {
         }
 
         & > div.company {
-            @include Rectangle(80%, 100%);
+            @include Rectangle(80%, 280px);
             width: 100%;
             // @include Debug(yellow);
-            @include GridCenter();
+            @include Flex(column);
             div.company_container {
                 height: 260px;
                 // @include Debug();
-                @include Flex(column);
+                @include Flex(column, space-evenly);
                 width: 80%;
 
                 & > p {
