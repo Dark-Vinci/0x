@@ -22,10 +22,10 @@ div.container {
             height: calc(100vh + 300px);
         }
 
-        & > section.f{
-            @include Debug(aqua);
-            height: 1240px;
-        }
+        // & > section.f{
+        //     @include Debug(aqua);
+        //     height: 1240px;
+        // }
 
         & > section.t {
             @include Debug();

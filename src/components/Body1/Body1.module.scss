@@ -4,5 +4,74 @@
 @import "../../sass/mixins/others.scss";
 
 div.container {
-    // @include Debug();
+    @include Debug();
+    @include GridCenter();
+    @include Rectangle(100vw, 1240px);
+
+    & > div.body1_container {
+        @include Debug(green);
+        @include Rectangle(80%, 100%);
+        @include Flex(column, space-between);
+
+        & > div.title {
+            font-size: 70px;
+            @include Debug();
+            color: #70707B;
+
+            & > p {
+                & > span {
+                    color: #26272B;
+                }
+            }
+        }
+
+        & > div.company {
+            
+        }
+
+
+        & > div.grid {
+            @include Rectangle(100%, 950px);
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            row-gap: 20px;
+            column-gap: 20px;
+            @include Debug(yellow);
+
+            & > div {
+                @include Debug();
+                height: 300px;
+                // display: none;
+                // height: 300px;
+            }
+
+            & > div.fade {
+                @include Debug();
+                // height: 300px;
+                visibility: hidden;
+                // height: 300px;
+            }
+
+            // & > div:first-child {
+            //     margin-top: calc(0.8*100vw/6);
+            // }
+
+            & > div:is(:nth-child(4), :nth-child(6), :nth-child(7), :nth-child(9)){
+                margin-top: -150px;
+                @include Debug(blue);
+                // height: 300px;
+            }
+
+            & > div:nth-child(5){
+                // margin-top: -150px;
+                @include Debug(blue);
+                // height: 300px;
+            }
+
+            & > div:nth-child(2){
+                @include Debug(blue);
+                // height: 300px;
+            }
+        }
+    }
 }
