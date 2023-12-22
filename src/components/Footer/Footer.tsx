@@ -53,7 +53,22 @@ export function Footer(): JSX.Element {
                 </div>
 
                 <div className={ style.bottom }>
-                    <div className={ style.main }>Main</div>
+                    <div className={ style.main }>
+                        <div className={style.left}>
+                            <div className={style.logo}>
+                                <div>
+                                    <img 
+                                        src="https://assets-global.website-files.com/640bf70a17d12b42d97a052b/640bfd7d8441821c4cd20210_logo.svg" 
+                                        alt="" 
+                                    />
+                                </div>
+                            </div>
+                            <div className={style.description}>
+                                <p>Connecting developers to Web3 markets.</p>
+                            </div>
+                        </div>
+                        <div className={style.right}>right</div>
+                    </div>
                     <div className={ style.sub }>
                         <div className={ style.sub_container }>
                             <div className={ style.left }>
