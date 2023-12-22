@@ -12,7 +12,6 @@ div.container {
     & > div.footer_container {
         height: 100%;
         @include Flex(column);
-        // width: 100vw;
 
 
         & > div {
@@ -176,21 +175,117 @@ div.container {
         }
 
         & > div.bottom {
-            @include Debug(yellow);
+            // @include Debug(yellow);
             @include Flex(column, flex-end, center);
             height: 600px;
             margin-bottom: 50px;
 
             & > div.main {
                 height: 360px;
-                width: 100vw;
-                @include Debug(green);
+                width: 80vw;
+                // @include Debug(green);
+
+                @include Flex();
+
+                & > div {
+                    // @include Debug(yellow);
+                    @include Square(100%);
+                    flex-basis: 50%;
+                }
+
+                & > div.left {
+                    & > div {
+                        @include Rectangle(100%, 40px);
+                    }
+
+                    & > div.logo {
+                        div {
+                            @include Square(40px);
+
+                            img {
+                                // width: 100%;
+                                @include Square(100%);
+                                object-fit: fill;
+                            }
+                        }
+                    }
+
+                    & > div.description {
+                        @include Flex(row, flex-start);
+                        color: #70707B;
+                    }
+                }
+
+                & > div.right {
+                    @include Flex();
+
+                    & > div {
+                        @include Square(100%);
+                        // @include Debug();
+
+                        & > * {
+                            text-align: left;
+                            margin: 15px;
+                        }
+
+                        & > p {
+                            font-size: 20px;
+                        }
+
+                        & > ul {
+                            list-style-type: none;
+
+                            li {
+                                margin-bottom: 20px;
+                                a {
+                                    color: #70707B;
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                }
             }
 
             & > div.sub {
                 height: 240px;
                 width: 100vw;
-                @include Debug();
+                // @include Debug();
+                @include Flex(column, flex-start);
+
+                & > div.sub_container {
+                    width: 80%;
+                    // @include Debug(green);
+                    margin-top: 30px;
+                    height: 45px;
+                    padding-top: 30px;
+                    border-top: 1px solid #F4F4F5;
+
+                    @include Flex();
+
+                    & > div {
+                        // @include Debug(green);
+                        flex-basis: 50%;
+                        height: 30px;
+
+                        &:first-child {
+                            color: #70707B;
+                            font-size: 20px;
+                            @include Flex(row, flex-start);
+                        }
+
+                        &:last-child {
+                            @include Flex(row, flex-end);
+                            & > * {
+                                color: #D1D1D6;
+                                margin: 10px;
+                                &:hover {
+                                    color: #70707B;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }

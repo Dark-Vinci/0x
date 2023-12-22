@@ -67,17 +67,51 @@ export function Footer(): JSX.Element {
                                 <p>Connecting developers to Web3 markets.</p>
                             </div>
                         </div>
-                        <div className={style.right}>right</div>
+
+                        <div className={style.right}>
+                            <div className="product">
+                                <p>PRODUCT</p>
+                                <ul>
+                                    <li><a href=".">Swap API</a></li>
+                                    <li><a href=".">Tx Relay API</a></li>
+                                    <li><a href=".">Solutions</a></li>
+                                </ul>
+                            </div>
+
+                            <div className="developer">
+                                <p>DEVELOPER</p>
+                                <ul>
+                                    <li><a href=".">Documentation</a></li>
+                                    <li><a href=".">Help</a></li>
+                                    <li><a href=".">Stack Exchange</a></li>
+                                    <li><a href=".">Contact Us</a></li>
+                                </ul>
+                            </div>
+
+                            <div className="company">
+                                <p>COMPANY</p>
+                                <ul>
+                                    <li><a href=".">Terms of Service</a></li>
+                                    <li><a href=".">Privacy Notice</a></li>
+                                    <li><a href=".">Cookie Notice</a></li>
+                                    <li><a href=".">API License Agreement</a></li>
+                                    <li><a href=".">Careers</a></li>
+                                    <li><a href=".">Press</a></li>
+                                    <li><a href=".">Media Kit</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
+
                     <div className={ style.sub }>
                         <div className={ style.sub_container }>
                             <div className={ style.left }>
                                 <p>© ZeroEx Holdings, Inc. All rights reserved.</p>
                             </div>
                             <div className={ style.right }>
-                                <AiFillTwitterCircle />
-                                <FaReddit />
-                                <FaGithub />
+                                <AiFillTwitterCircle size={'35px'}/>
+                                <FaReddit size={'35px'}/>
+                                <FaGithub size={'35px'}/>
                             </div>
                         </div>
                     </div>
