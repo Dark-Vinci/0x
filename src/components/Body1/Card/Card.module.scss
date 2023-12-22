@@ -1,0 +1,62 @@
+@import "../../../sass/constants/colors.scss";
+@import "../../../sass/mixins/alignment.scss";
+@import "../../../sass/mixins/borders.scss";
+@import "../../../sass/mixins/others.scss";
+
+div.container {
+    padding: 30px;
+    color: #A0A0AB;
+    border-radius: 30px;
+    background-color: #F4F4F5;
+    height: 320px;
+
+    & > div.card_container {
+        & > div {
+            margin: 10px;
+        }
+
+        & > div.head {
+            // @include Debug(black);
+            & > div.img {
+                // @include Debug(purple);
+                @include Square(64px);
+                width: 64px;
+                height: 64px;
+
+                & > img {
+                    @include Square(100%);
+                    object-fit: fill;
+                }
+            }
+        }
+
+        & > div.icon {
+            // @include Debug(green);
+
+            & > div {
+                // @include Debug(blue);
+                @include Flex(row, flex-end)
+            }
+        }
+
+        & > div.title {
+            // @include Debug();
+            font-size: 30px;
+            p {
+                text-align: left;
+
+                span {
+                    color: black;
+                }
+            }
+        }
+
+        & > div.description {
+            // @include Debug();
+            p {
+                text-align: left;
+                font-size: 20px;
+            }
+        }
+    }
+}

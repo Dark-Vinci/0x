@@ -1,4 +1,6 @@
 import { JSX } from 'react';
+import { FaArrowRight } from "react-icons/fa";
+import { WiStars } from "react-icons/wi";
 
 import style from './Card.module.scss';
 
@@ -13,21 +15,24 @@ export function Card({imageUrl, title, description, isComingSoon}: CardProps): J
     return (
         <div className={style.container }>
             <div className={style.card_container }>
+                <div className={style.icon }>
+                    {
+                        isComingSoon ?
+                            <div> 
+                                <WiStars size={'20px'}/> Coming soon
+                            </div> :
+                            <div><FaArrowRight size={'25px'}/> </div>
+                    }
+                </div>
+
                 <div className={style.head }>
                     <div className={style.img }>
                         <img src={imageUrl} alt="card" />
                     </div>
-                    <div className={style.icon }>
-                        {
-                            isComingSoon ?
-                                <div>coming soon icon</div> :
-                                <div>arrow icon</div>
-                        }
-                    </div>
                 </div>
 
                 <div className={style.title }>
-                    <p>{title} <span>API</span></p>
+                    <p><span>{title}</span> API</p>
                 </div>
 
                 <div className={style.description }>
