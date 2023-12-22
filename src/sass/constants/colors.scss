@@ -1,2 +1,9 @@
-$text-color: --var(text-color, black);
-$background-color: --var(background-color, white);
+$text-color: var(--text-color, black);
+$bg-black: var(--bg-black, black);
+$tx-white: var(--tx-white, white);
+$bg-color: var(--bg-color, white);
+$nav-link-bg-color: var(--nav-link-bg-color, #F4F4F5);
+$footer-top-card-bg-color: var(--footer-top-card-bg-color, #26272B);
+$footer-bot-card-bg-color: var(--footer-top-card-bg-color, #C8D4FA);
+$footer-card-l-text-color: var(--footer-card-l-text-color, #0E106D);
+$footer-card-l-text-min-color: var(--footer-card-l-text-min-color, #625B96)

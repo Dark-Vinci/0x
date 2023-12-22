@@ -5,4 +5,148 @@
 
 div.container {
     // @include Debug();
+    height: 1650px;
+    width: 100vw;
+    @include GridCenter();
+
+    & > div.footer_container {
+        height: 100%;
+        @include Flex(column);
+        // width: 100vw;
+
+
+        & > div {
+            flex-basis: 50%;
+        }
+
+        & > div.top {
+            @include Debug(aqua);
+            width: 100vw;
+            @include Flex(column);
+
+            & > div {
+                flex-basis: 50%;
+                // width: 100vw;
+            }
+
+            & > div:first-child {
+                margin-bottom: 20px;
+                border-radius: 50px 50px 20px 20px;
+                background-color: $footer-top-card-bg-color;
+            }
+
+            & > div:last-child {
+                background-color: $footer-bot-card-bg-color;
+                border-radius: 20px 20px 50px 50px;
+                color: blue;
+                @include GridCenter();
+
+                & > div.bot_container {
+                    // @include Debug(green);
+                    width: 80%;
+                    height: 70%;
+                    @include Flex(column, space-between);
+
+                    & > div {
+                        @include Flex(row, flex-start);
+                        width: 100%;
+                        // @include Debug(yellow);
+                    }
+
+                    & > div.title {
+                        color: $footer-card-l-text-color;
+                        p {
+                            font-size: 70px;
+                        }
+                    }
+
+                    & > div.terms {
+                        & > * {
+                            color: $footer-card-l-text-min-color;
+                            margin: 10px;
+                        }
+
+                        & > a {
+                            color: $footer-card-l-text-color;
+                            text-decoration: none;
+                            font-size: 20px;
+                        }
+                    }
+
+                    & > div.description {
+                        color: $footer-card-l-text-min-color;
+                        p {
+                            font-size: 23px;
+                        }
+                    }
+
+                    & > div.input {
+                        height: 55px;
+
+                        & > div.input_container {
+                            // @include Debug(red);
+                            @include Rectangle(435px, 100%);
+                            border-radius: 40px;
+                            @include Flex();
+                            height: 52px;
+                            position: relative;
+                            background-color: white;
+
+                            & > input {
+                                flex-basis: 70%;
+                                height: 100%;
+                                font-size: 20px;
+                                background-color: none;
+                                border: none;
+                                left: 20px;
+                                margin-left: 10px;
+
+                                &:focus {
+                                    outline: none;
+                                }
+                            }
+
+                            & > * {
+                                position: absolute;
+                            }
+
+                            & > div.icon {
+                                right: 8px;
+                                flex-basis: 20%;
+                                height: 45px;
+                                width: 60px;
+                                background-color: #155EEF;
+                                border-radius: calc(40px - 12px);
+                                @include GridCenter();
+                            }
+                        }
+                    }
+                }
+            }
+
+            & > div.footer_card {
+                width: calc(100vw - 300px);
+                @include Debug(green);
+            }
+        }
+
+        & > div.bottom {
+            @include Debug(yellow);
+            @include Flex(column, flex-end, center);
+            height: 600px;
+            margin-bottom: 50px;
+
+            & > div.main {
+                height: 360px;
+                width: 100vw;
+                @include Debug(green);
+            }
+
+            & > div.sub {
+                height: 240px;
+                width: 100vw;
+                @include Debug();
+            }
+        }
+    }
 }
