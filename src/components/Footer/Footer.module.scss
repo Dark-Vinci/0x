@@ -20,38 +20,72 @@ div.container {
         }
 
         & > div.top {
-            @include Debug(aqua);
+            // @include Debug(aqua);
             width: 100vw;
             @include Flex(column);
 
             & > div {
                 flex-basis: 50%;
-                // width: 100vw;
             }
 
             & > div:first-child {
                 margin-bottom: 20px;
                 border-radius: 50px 50px 20px 20px;
                 background-color: $footer-top-card-bg-color;
+                color: white;
+
+                & > div.cd_container {
+                    // @include Debug(green);
+                    @include Flex(column);
+
+                    & > div {
+                        margin: 10px;
+                        // @include Debug(yellow);
+                    }
+
+                    & > div.title {
+                        color: $footer-card-t-text-titles;
+                        p {
+                            font-size: 70px;
+
+                            span {
+                                color: $footer-card-t-text-titles-clear;
+                            }
+                        }
+                    }
+
+                    & > div.button {
+                        button {
+                            width: 160px;
+                            height: 44px;
+                            border: none;
+                            color: black;
+                            background-color: white;
+                            border-radius: 40px;
+                            font-size: 18px;
+                        }
+                    }
+
+                    & > div.description {
+                        // @include Debug();
+                        color: $footer-card-t-text-titles;
+
+                        & > p {
+                            // @include Debug(green);
+                            text-align: left;
+                            width: 70%;
+                            font-size: 23px;
+                        }
+                    }
+                }
             }
 
             & > div:last-child {
                 background-color: $footer-bot-card-bg-color;
                 border-radius: 20px 20px 50px 50px;
-                color: blue;
-                @include GridCenter();
 
-                & > div.bot_container {
-                    // @include Debug(green);
-                    width: 80%;
-                    height: 70%;
+                & > div.cd_container {
                     @include Flex(column, space-between);
-
-                    & > div {
-                        @include Flex(row, flex-start);
-                        width: 100%;
-                        // @include Debug(yellow);
-                    }
 
                     & > div.title {
                         color: $footer-card-l-text-color;
@@ -126,7 +160,18 @@ div.container {
 
             & > div.footer_card {
                 width: calc(100vw - 300px);
-                @include Debug(green);
+                // @include Debug(green);
+                @include GridCenter();
+
+                & > div.cd_container {
+                    width: 80%;
+                    height: 70%;
+
+                    & > div {
+                        @include Flex(row, flex-start);
+                        width: 100%;
+                    }
+                }
             }
         }
 

@@ -10,21 +10,21 @@ export function Footer(): JSX.Element {
             <div className={ style.footer_container }>
                 <div className={ style.top }>
                     <div className={[style.footer_card, style.f].join(' ')}>
-                        <div className="top_container">
-                            <div className="title">
-                                <p>Ready to start building?</p>
+                        <div className={style.cd_container }>
+                            <div className={style.title }>
+                                <p><span>Ready</span> to start building?</p>
                             </div>
-                            <div className="description">
+                            <div className={style.description }>
                                 <p>Create a 0x account and get started, for free, in less than five minutes.</p>
                             </div>
-                            <div className="button">
+                            <div className={style.button }>
                                 <button>Create Account</button>
                             </div>
                         </div>
                     </div>
 
                     <div className={[style.footer_card, style.s].join(' ')}>
-                        <div className={style.bot_container }>
+                        <div className={style.cd_container }>
                             <div className={style.title }>
                                 <p>Join our newsletter</p>
                             </div>
