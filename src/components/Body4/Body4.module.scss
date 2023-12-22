@@ -5,4 +5,171 @@
 
 div.container {
     // @include Debug();
+    background-color: #26272B;
+    height: 780px;
+    border-radius: 40px 40px 0 0;
+
+    @include GridCenter();
+    & > div {
+        // @include Debug(green);
+        height: 780px;
+        width: 75%;
+        @include GridCenter();
+
+        & > div.inner {
+            width: 75%;
+            // @include Debug();
+            height: 435px;
+            @include Flex(row);
+
+            & > div {
+                margin: 20px;
+                // @include Debug(yellow);
+                flex-basis: 50%;
+                height: 100%;
+            }
+
+            & > div.left {
+                // width: 520px;
+                padding: 20px;
+                // @include Debug();
+                border-radius: 30px;
+                background-color: #18181B;
+                @include Flex(column);
+                flex-basis: 50%;
+
+                & > div.top {
+                    @include Flex(column, space-between);
+                    flex-basis: 30%;
+                    width: 100%;
+                    // @include Debug();
+                    margin-top: 20px;
+
+                    & > div.quote {
+                        width: 100%;
+                        // @include Debug(yellow);
+                        @include Flex(row, space-between);
+
+                        & > div.q {
+                            // @include Debug(white);
+                            color: #39393E;
+                        }
+
+                        & > a {
+                            color: #9DF6BA;
+                            text-decoration: none;
+                            font-size: 20px;
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+
+                    & > div.curl {
+                        // @include Debug();
+                        text-align: left;
+                        width: 100%;
+                        color: white;
+                        font-size: 20px;
+                        margin-top: 10px;
+                        margin-bottom: 10px;
+
+                        & > span {
+                            font-size: 20px;
+                            margin-right: 10px;
+                            color: #9DF6BA;
+                        }
+                    }
+
+                    & > div.grid {
+                        // padding: 20px;
+                        width: 100%;
+                        @include Flex(column);
+                        // @include Debug(pink);
+
+                        & > div {
+                            width: 100%;
+                            @include Flex(row, space-between);
+                        }
+
+                        & > div:first-child {
+                            // @include Debug(white);
+                            color: #A0A0AB;
+                        }
+
+                        & > div:last-child {
+                            // @include Debug(white);
+                            color: #FFFFFF;
+                            font-size: 20px;
+                            margin-top: 10px;
+                        }
+                    }
+                }
+
+                & > div.bot {
+                    @include Flex();
+                    flex-basis: 70%;
+
+                    & > div.bot_container {
+                        width: auto;
+                        height: 100%;
+                        // @include Debug(purple);
+
+                        & > pre {
+                            // @include Debug(blue);
+                            height: 200px;
+                            width: 98%;
+                            text-align: left;
+                            overflow-y: scroll;
+                            overflow-x: auto;
+                            position: relative;
+                            padding-left: 20px;
+                            color: white;
+                            font-weight: bold;
+                            overscroll-behavior-x: contain;
+
+                            &::-webkit-scrollbar {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+
+            & > div.right {
+                flex-basis: 50%;
+                & > div.right_container {
+                    height: 100%;
+                    width: 100%;
+                    // @include Debug();
+                    @include Flex(column, space-evenly, flex-start);
+
+                    & >  p {
+                        // @include Debug(green);
+                        font-size: 65px;
+                        height: 300px;
+                        text-align: left;
+                        color: white;
+                        // width: 390px;
+
+                        & > span {
+                            display: inline-block;
+                            color: #A2FFC1;
+                            width: 400px;
+                        }
+                    }
+
+                    & > button {
+                        @include Rectangle(150px, 44px);
+                        border: none;
+                        border-radius: 20px;
+                        background-color: #A2FFC1;
+                        color: black;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
 }

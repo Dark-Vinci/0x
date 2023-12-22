@@ -27,14 +27,14 @@ div.container {
         //     height: 1240px;
         // }
 
-        & > section.t {
-            @include Debug();
-            height: 1500px;
-        }
+        // & > section.t {
+        //     @include Debug();
+        //     height: 1500px;
+        // }
 
-        & > section.fo {
-            @include Debug(black);
-            height: 780px;
-        }
+        // & > section.fo {
+        //     @include Debug(black);
+        //     height: 780px;
+        // }
     }
 }
