@@ -21,30 +21,32 @@ export function BigCard({
     return (
         <div 
             className={ style.container } 
-            style={{ backgroundColor: bgColor }}
+            style={{ backgroundColor: bgColor, color: name === 'Jean Meyer' ? 'black': 'white' }}
         >
-            <div className={ style.top }>
-                <div className={ style.top_container }>
-                    <div className={ style.company }>
-                        <img 
-                            src={company} 
-                            alt="company logo" 
-                        />
-                    </div>
-                    <div className={ style.description }>
-                        <p>{ description }</p>
+            <div className={ style.big_card_container }>
+                <div className={ style.top }>
+                    <div className={ style.top_container }>
+                        <div className={ style.company }>
+                            <img 
+                                src={company} 
+                                alt="company logo" 
+                            />
+                        </div>
+                        <div className={ style.description }>
+                            <p>{ description }</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div className={ style.bot }>
-                <div className={ style.bot_container }>
-                    <div className={ style.name }>
-                        <p>{ name }</p>
-                    </div>
+                <div className={ style.bot }>
+                    <div className={ style.bot_container }>
+                        <div className={ style.name }>
+                            <p>{ name }</p>
+                        </div>
 
-                    <div className={ style.title }>
-                        <p>{ title }</p>
+                        <div className={ style.title }>
+                            <p>{ title }</p>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,7 +1,30 @@
+@import "../../../sass/constants/colors.scss";
+@import "../../../sass/mixins/alignment.scss";
+@import "../../../sass/mixins/borders.scss";
+@import "../../../sass/mixins/others.scss";
+
 div.container {
     width: 360px;
     height: 224px;
-    background-color: blue;
-    color: white;
+    color: black;
     border-radius: 50px;
+    background-color: #F4F4F5;
+    @include GridCenter();
+
+    & > div {
+        margin: 30px;
+        // @include Debug();
+        @include Rectangle(80%, 80%);
+
+        @include Flex(column);
+
+        & > div.numb {
+            font-size: 50px;
+        }
+
+        & > div.title {
+            font-size: 20px;
+            color: #74747E;
+        }
+    }
 }

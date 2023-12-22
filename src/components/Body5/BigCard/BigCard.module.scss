@@ -1,5 +1,66 @@
+@import "../../../sass/constants/colors.scss";
+@import "../../../sass/mixins/alignment.scss";
+@import "../../../sass/mixins/borders.scss";
+@import "../../../sass/mixins/others.scss";
+
+
+
 div.container {
-    width: 500px;
-    height: 500px;
+    width: 560px;
+    height: 415px;
     border-radius: 50px;
+    @include GridCenter();
+    color: white;
+    // @include Rectangle(80%, 80%)
+
+    & > div.big_card_container {
+        margin: 50px;
+        @include Rectangle(80%, 80%);
+        // @include Debug();
+
+        @include Flex(column, space-between);
+
+        & > div.bot {
+            width: 100%;
+            // @include Debug(yellow);
+            @include Flex(row, flex-start);
+
+            & > div.bot_container {
+                // color: white;
+                // @include Debug(green);
+
+                & > div.name {
+                    font-weight: bold;
+                    font-size: 20px;
+                }
+
+                & > div.title {
+                    font-size: 15px;
+                }
+            }
+        }
+
+        & > div.top {
+            // @include Debug(yellow);
+            width: 100%;
+
+            & > div.top_container {
+                & > div {
+                    // @include Debug(blue);
+                    @include Flex(row, flex-start);
+                    margin: 0 0 10px 0;
+
+                    & > p {
+                        text-align: left;
+                        font-size: 20px;
+                    }
+    
+                    & > div {
+                        // @include Debug(green);
+                        @include Flex(column, flex-start);
+                    }
+                }
+            }
+        }
+    }
 }

@@ -4,25 +4,61 @@
 @import "../../sass/mixins/others.scss";
 
 div.container {
-    @include Debug();
+    // @include Debug();
     @include Rectangle(100vw, 1500px);
     @include GridCenter();
 
     & > div.body5_container {
-        @include Debug(green);
+        // @include Debug(green);
         @include Rectangle(80%, 100%);
         @include Flex(column, space-evenly);
 
+        & > div.title {
+            width: 100%;
+            // @include Debug(blue);
+            @include GridCenter();
+
+            & > p {
+                // @include Debug(green);
+                width: 520px;
+                font-size: 65px;
+            }
+        }
+
+        & > div.description {
+            & > p {
+                width: 600px;
+                font-size: 20px;
+                color: #70707B;
+            }
+        }
+
         & > div.mini_card {
-            @include Debug(aqua);
+            // @include Debug(aqua);
             width: 100%;
             & > div.mini_card_container {
-                @include Debug(yellow);
+                // @include Debug(yellow);
                 @include Flex(row, space-evenly);
+            }
+        }
 
-                // & > * {
+        & > div.big_card {
+            width: 1100px;
+            padding-left: 700px;
+            overflow-y: auto; 
+            @include Flex();
+            // @include Debug(blue);
+            scrollbar-width: none;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: auto;
+            overscroll-behavior-x: contain;
 
-                // }
+            & > div {
+                margin: 0 20px 0 20px;
+            }
+
+            &::-webkit-scrollbar {
+                display: none;
             }
         }
     }
