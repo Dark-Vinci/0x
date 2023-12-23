@@ -76,7 +76,7 @@ export function Body4(): JSX.Element {
                                 <div className={ style.q}>
                                     <p>Get price quote</p>
                                 </div>
-                                <a>Copy to clipboard</a>
+                                <a href='.'>Copy to clipboard</a>
                             </div>
                             <div className={ style.curl}>
                                 <span>span</span> https://api.0x.org/swap/v1/quote

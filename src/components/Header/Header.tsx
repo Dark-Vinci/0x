@@ -5,7 +5,10 @@ import style from './Header.module.scss';
 export function Header(): JSX.Element {
     return (
         <div className={ style.container }>
-            HEADER
+            <div className="header_container">
+                <div className="left"></div>
+                <div className="right"></div>
+            </div>
         </div>
     );
 }

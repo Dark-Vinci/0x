@@ -1,12 +1,8 @@
 import { JSX } from 'react';
-import Carousel from 'react-multi-carousel';
-// const b =a.default;
 
 import style from './Body5.module.scss';
 import { MiniCard } from './MiniCard';
 import { BigCard } from './BigCard';
-
-// const { Carousel} = a.default;
 
 const curaselList = [
     {
