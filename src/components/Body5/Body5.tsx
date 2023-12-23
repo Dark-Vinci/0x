@@ -69,25 +69,23 @@ export function Body5(): JSX.Element {
                 </div>
 
                 <div className={ style.big_card }>
-                    {/* <div></div> */}
-                        {
-                            curaselList.map((el, i) => {
-                                return (
-                                    <div
-                                        key={i}
-                                    >
-                                        <BigCard 
-                                            company={el.company} 
-                                            description={el.description} 
-                                            name={el.name} 
-                                            title={el.title} 
-                                            bgColor={el.bgColor} 
-                                        />
-                                    </div>
-                                )
-                            })
-                        }
-                    {/* </Carousel> */}
+                    {
+                        curaselList.map((el, i) => {
+                            return (
+                                <div
+                                    key={i}
+                                >
+                                    <BigCard 
+                                        company={el.company} 
+                                        description={el.description} 
+                                        name={el.name} 
+                                        title={el.title} 
+                                        bgColor={el.bgColor} 
+                                    />
+                                </div>
+                            )
+                        })
+                    }
                 </div>
             </div>
         </div>
