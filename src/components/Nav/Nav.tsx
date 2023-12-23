@@ -2,9 +2,18 @@ import { JSX } from 'react';
 
 import style from './Nav.module.scss';
 
-export function Nav(): JSX.Element {
+interface NavProps {
+    readonly scrollDirection: string;
+}
+
+export function Nav({ scrollDirection }: NavProps): JSX.Element {
     return (
-        <div className={ style.container }>
+        <div 
+            className={ style.container }
+            style={{
+                top: scrollDirection === 'up' ? '0' : '-100px',
+            }}
+        >
             <div className ={ style.nav_container }>
                 <div className={ style.left }>
                     <img 

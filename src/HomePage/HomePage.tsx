@@ -1,4 +1,4 @@
-import { JSX } from 'react';
+import { JSX, useEffect, useState } from 'react';
 
 import style from './HomePage.module.scss';
 import { 
@@ -13,10 +13,36 @@ import {
 } from '../components';
 
 export function HomePage(): JSX.Element {
+    const [scrollDirection, setScrollDirection] = useState<string>('');
+  const [prevScrollY, setPrevScrollY] = useState<number>(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > prevScrollY) {
+        setScrollDirection('down');
+      } else if (currentScrollY < prevScrollY) {
+        setScrollDirection('up');
+      }
+
+      setPrevScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      // Cleanup: remove the scroll event listener when the component unmounts
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [prevScrollY]);
+  
     return (
         <div className={ style.container }>
             <nav>
-                <Nav />
+                <Nav
+                    scrollDirection={scrollDirection}
+                />
             </nav>
             <body>
                 <header>

@@ -16,13 +16,8 @@ div.container {
         height: auto;
 
         & > header {
-            @include Debug(green);
-            height: calc(100vh + 300px);
+            // @include Debug(green);
+            height: calc(100vh - 100px);
         }
-
-        // & > section.t {
-        //     // @include Debug();
-        //     height: 1500px;
-        // }
     }
 }

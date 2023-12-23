@@ -5,4 +5,88 @@
 
 div.container {
     // @include Debug();
+    @include Rectangle(100vw, 100%);
+    height: calc(100vh - 100px);
+    @include GridCenter();
+
+    & > div.header_container {
+        @include Rectangle(80%, 500px);
+        @include Flex();
+
+        & > div {
+            height: 100%;
+            // @include Debug();
+        }
+
+        & > div.left {
+            flex-basis: 60%;
+            @include Flex(column, space-between);
+
+            & > div {
+                // @include Debug();
+                width: 100%;
+            }
+
+            & > div.mid {
+                p {
+                    color: #70707B;
+                    font-size: 23px;
+                    text-align: left;
+                }
+            }
+
+            & > div.button {
+                @include Flex(row, flex-start);
+                button {
+                    width: 130px;
+                    height: 44px;
+                    border-radius: 30px;
+                    border: none;
+                    color: white;
+                    background-color: black;
+                    font-size: 20px;
+                }
+            }
+
+            & > div.top {
+                p {
+                    width: 90%;
+                    font-size: 80px;
+                    text-align: left;
+                }
+            }
+        }
+
+        & > div.right {
+            flex-basis: 40%;
+            @include GridCenter();
+
+            & > div.right_container {
+                // @include Debug();
+
+                & > img {
+                    // @include Debug(yellow);
+                    @include Animate(4.1s, infinite) {
+                        0% {
+                            width: 300px; 
+                            height:300px;
+                            filter: blur(0px);
+                        }
+
+                        90% {
+                            width: 380px;
+                            height: 380px;
+                            filter: blur(0px);
+                        }
+
+                        100% {
+                            width: 420px;
+                            height: 420px;
+                            filter: blur(90px);
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

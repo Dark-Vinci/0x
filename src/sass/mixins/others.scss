@@ -29,3 +29,15 @@
     width: $l;
     height: $l;
 }
+
+@mixin Animate($dur: 5s, $count: infinite) {
+    $name: inline-#{unique-id()};
+
+    @keyframes #{$name} {
+        @content;
+    }
+
+    animation-name: $name;
+    animation-duration: $dur;
+    animation-iteration-count: $count;
+}

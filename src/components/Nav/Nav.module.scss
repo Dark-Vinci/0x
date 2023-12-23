@@ -9,13 +9,19 @@ div.container {
     width: 100%;
     @include GridCenter();
     border-radius: 0 0 40px 40px;
-    background-color: #e2dfdf;
+    background-color: white;
+    // @include Debug(blue);
+    transition: all 1s;
+    right: 0;
+    position: fixed;
+    z-index: 10;
 
     & > div.nav_container {
         @include Flex();
         // @include Rectangle(80%, 100%);
         width: 80%;
         height: 44px;
+        // @include Debug();
 
         & > * {
             // @include Debug();
