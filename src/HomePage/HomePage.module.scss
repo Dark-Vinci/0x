@@ -1,7 +1,6 @@
 @import '../sass/mixins/borders.scss';
 
 div.container {
-    border: 1px solid blue;
     width: 100vw;
 
     & > * {
@@ -14,10 +13,5 @@ div.container {
 
     & > body {
         height: auto;
-
-        & > header {
-            // @include Debug(green);
-            height: calc(100vh - 100px);
-        }
     }
 }
